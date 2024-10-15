@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: pink;
+}
+
+div {
+  margin: auto;
+  border: 3px solid white;
+  margin-bottom: 1rem;
+}
+
+.box1 {
+  width: 300px;
+
+}
+
+.cat-image {
+  width: 100%;
+  padding: 10px;
+}
+
+.box {
+  color: white;
+  width: 300px;
+  text-align: center;
+  background-image: url("https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+}
+
+.box3 {
+  width: 400px;
+}

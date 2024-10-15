@@ -1,0 +1,38 @@
+h3 {
+  color: aquamarine;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 2px;
+  text-align: justify;
+}
+
+li, h1, .something {
+  font-size: 20px;
+  color: chocolate;
+}
+
+body {
+  background-color: rgba(100, 200, 80, 0.5);
+}
+
+.something {
+  background-color: #c14ccc87;
+}
+
+h1 {
+  text-decoration: line-through;
+  font-size: 30px;
+}
+
+#b-tagas {
+  font-size: 30px;
+}
+
+.big-text {
+  font-size: 35px;
+}

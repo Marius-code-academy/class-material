@@ -1,0 +1,11 @@
+p {
+  color: red !important;
+}
+
+.par {
+  color: blue;
+}
+
+#par {
+  color: green;
+}

@@ -1,0 +1,47 @@
+html {
+  scroll-behavior: smooth;
+}
+
+table {
+  margin-bottom: 10px;
+}
+
+.table-1 {
+  border-collapse: collapse;
+}
+
+.table-1 td,
+.table-1 th {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: left;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.white-text {
+  color: white;
+}
+
+.base-table {
+  border: 1px red;
+  border-collapse: collapse;
+  /* border-spacing: 0; */
+}
+
+.base-table td,
+.base-table th {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+}

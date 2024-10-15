@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="#kazkas">Go down</a>
+    <table class="table-1">
+      <tr>
+        <th>Vardas</th>
+        <td>Vardas Pavarde</td>
+      </tr>
+      <tr>
+        <th rowspan="2">Telefono numeris</th>
+        <td>321684321</td>
+      </tr>
+      <tr>
+        <td>321681351</td>
+      </tr>
+      <tr>
+        <th rowspan="3">Megstamiausios spalvos</th>
+        <td class="orange white-text">Oranzine</td>
+      </tr>
+      <tr>
+        <td class="blue white-text">Melyna</td>
+      </tr>
+      <tr>
+        <td class="green white-text">Zalia</td>
+      </tr>
+    </table>
+
+    <table class="base-table">
+      <thead>
+        <th>Vardas</th>
+        <th>Pavarde</th>
+        <th>Amzius</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Bill</td>
+          <td>Gates</td>
+          <td>66</td>
+        </tr>
+        <tr>
+          <td>Steve</td>
+          <td>Wozniak</td>
+          <td>71</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table id="kazkas" class="base-table">
+      <thead>
+        <tr>
+          <th>Vardas</th>
+          <th>Pavarde</th>
+          <th>Amzius</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="orange white-text" colspan="2">Madonna</td>
+          <td>63</td>
+        </tr>
+        <tr>
+          <td>Paul</td>
+          <td>Giamati</td>
+          <td rowspan="2">53</td>
+        </tr>
+        <tr>
+          <td>Vin</td>
+          <td>Diesel</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

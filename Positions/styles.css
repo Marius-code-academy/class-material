@@ -1,0 +1,55 @@
+body {
+  height: 200vh;
+}
+
+.relative {
+  position: relative;
+  top: 50px;
+  left: 40px;
+}
+
+.fixed {
+  background-color: rgba(29, 29, 78, 0.5);
+  /* width: 100px; */
+  height: 100px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* inset: 20px; */
+  z-index: 3;
+}
+
+.fixed2 {
+  position: fixed;
+  background-color: salmon;
+  height: 100px;
+  width: 100px;
+  bottom: 30px;
+  z-index: 2;
+}
+
+.sticky {
+  position: sticky;
+  top: 50px;
+  width: 100%;
+  height: 100px;
+  background-color: blueviolet;
+}
+
+.absolute {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg) scale(1.5); 
+}
+
+.container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+}

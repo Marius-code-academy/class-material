@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+}
+
+header {
+  display: block;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.margin {
+  margin: 20px;
+}
+
+.logo {
+  width: 75px;
+  display: inline-block;
+}
+
+.grey-background {
+  background-color: rgb(237, 237, 237);
+}
+
+section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+nav {
+  margin-left: auto;
+  display: inline-block;
+}
+
+.section1 {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.small-par {
+  width: 60%;
+  display: inline-block;
+}
+
+.small-image {
+  width: 35%;
+  display: inline-block;
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+.section2 {
+  padding: 10px;
+}
+
+.section3 {
+  padding: 10px;
+}
+
+.list-container {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.list {
+  padding-left: 10px;
+}
+
+footer {
+  text-align: center;
+}

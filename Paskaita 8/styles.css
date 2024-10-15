@@ -1,0 +1,88 @@
+p:first-child {
+  color: red;
+}
+
+p:last-child {
+  color: blue;
+}
+
+.container p:nth-child(2) {
+  color: green;
+}
+
+.container p:nth-last-child(2) {
+  color: blueviolet;
+}
+
+p:only-child {
+  background-color: aquamarine;
+}
+
+p:first-of-type {
+  font-size: 20px;
+}
+
+p:last-of-type {
+  font-size: 25px;
+}
+
+h6:nth-child(odd) {
+  font-size: 20px;
+}
+
+p:nth-last-of-type(2)::first-letter {
+  font-size: 30px;
+  text-transform: capitalize;
+  color: salmon;
+}
+
+/* .first-line-styles::first-line {
+  color: royalblue;
+} */
+
+.first-line-styles::first-line {
+  color: royalblue;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h3::before {
+  content: "🚀asdf ";
+  font-size: 45px;
+  color: blueviolet;
+}
+
+h3::after {
+  content: " Kazkas gale";
+}
+
+.testas h4{
+  color: rosybrown;
+}
+
+.testas > h4 {
+  font-size: 30px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+span + h1 {
+  color: seagreen;
+}
+
+a:link {
+  background-color: aqua;
+}
+
+a:hover {
+  font-size: 20px;
+}
+
+
+a:visited {
+  background-color: brown;
+}

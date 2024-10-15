@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: "Roboto", sans-serif;
+}
+
+.card {
+  position: relative;
+  width: 250px;
+  background-color: white;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+.card-image {
+  width: 25%;
+}
+
+.card-title {
+  margin-top: 0.5rem;
+}
+
+.card-text {
+  font-size: 14px;
+  opacity: 0.8;
+  line-height: 1.7;
+}
+
+.card-link {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.margin-right-1 {
+  margin-right: 0.5rem;
+}
+
+.pill {
+  position: absolute;
+  background-color: #ff00e9;
+  width: fit-content;
+  padding: 0.5rem;
+  font-size: 10px;
+  color: white;
+  border-radius: 30px;
+  top: 10px;
+  right: -15px;
+}
