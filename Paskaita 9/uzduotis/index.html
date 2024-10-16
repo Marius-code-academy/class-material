@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <h1>Payment form</h1>
+    <p>Rquired fields are followed by .*.</p>
+    <h3>Contact information</h3>
+    <fieldset>
+      <legend>Title</legend>
+      <input name="title" id="input-radion-mister" type="radio">
+      <label for="input-radion-mister">Mister</label>
+      <br>
+      <input id="input-radio-miss" name="title" type="radio">
+      <label for="input-radio-miss">Miss</label>
+    </fieldset>
+    <label for="input-name">Name</label>
+    <input required type="text" id="input-name">
+    <br>
+    <label for="input-email">E-mail</label>
+    <input required type="email" id="input-email">
+    <br>
+    <label for="input-password">Password</label>
+    <input required type="password" id="input-password">
+    <h3>Payment information</h3>
+    <label for="select-card">Card type</label>
+    <select id="select-card">
+      <option value="visa">Visa</option>
+      <option value="mastercard">Mastercard</option>
+    </select>
+    <br>
+    <label for="input-card-number">Card number</label>
+    <input required id="input-card-number" type="text" minlength="16" maxlength="16">
+    <br>
+    <label for="input-expiration-data">Expiration date</label>
+    <input required type="date" id="input-expiration-data">
+    <button type="submit">Validate the payment</button>
+  </form>
+</body>
+</html>
