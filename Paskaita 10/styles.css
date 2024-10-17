@@ -1,0 +1,56 @@
+button {
+  color: white;
+  background-color: green;
+  border: none;
+  padding: 0.5rem;
+}
+
+button:hover {
+  background-color: greenyellow;
+  padding: 0.7rem;
+}
+
+input:focus {
+  background-color: aqua;
+}
+
+input[type="checkbox"]:checked {
+  accent-color: green;
+  height: 50px;
+  width: 50px;
+}
+
+input:disabled {
+  width: 50px;
+}
+
+input:required {
+  border: 2px solid yellow;
+}
+
+
+a:link {
+  background-color: tomato;
+  color: blue;
+}
+
+a:visited {
+  background-color: white;
+  color: hotpink;
+}
+
+a:active {
+  color: red;
+}
+
+input:in-range {
+  background-color: green;
+}
+
+input:out-of-range {
+  background-color: red;
+}
+
+input:read-only {
+  border: 2px solid blue;
+}
