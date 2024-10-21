@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 600px;
+  height: 600px;
+  outline: 1px solid black;
+}
+
+.container div {
+  border: 1px solid purple;
+}
+
+.container-1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-1 .smaller-box {
+  width: 200px;
+  height: 200px;
+}
+
+.container-1 .bigger-box {
+  width: 400px;
+  height: 200px;
+}
