@@ -1,0 +1,44 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.grid-container > div {
+  border: 1px solid black;
+}
+
+.grid-item-1 {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid-item-1 a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: black;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card-body-text {
+  margin-bottom: 70px;
+}
+
+button {
+  font-size: 2rem;
+  background-color: white;
+  border: 1px solid rgb(218, 218, 218);
+  padding: 0.5rem;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+div > img {
+  width: 100%;
+}
