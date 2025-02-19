@@ -1,0 +1,26 @@
+.div1 {
+  height: 100px;
+  width: 100px;
+  border: 2px solid red;
+  position: relative;
+  z-index: 100;
+  background-color: tomato;
+}
+
+.div2 {
+  height: 300px;
+  width: 300px;
+  border: 2px solid red;
+  position: relative;
+  z-index: 50;
+}
+
+.div2Inner {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  border: 2px solid red;
+  z-index: 5000;
+  background-color: lime;
+  top: -50px;
+}
