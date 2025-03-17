@@ -11,8 +11,8 @@ const taskSchema = new mongoose.Schema({
   estimation: {
     type: Number,
   },
-  status: {
-    type: String,
+  column: {
+    type: mongoose.Schema.Types.ObjectId,
     required: true,
   },
 });
