@@ -1,8 +1,12 @@
 import TaskModel from "../Models/TaskModel.js";
 
 export async function getTasks(req, res) {
+  const { columnId } = req.query;
+
+  const query = columnId ? { column: columnId } : {};
+
   try {
-    const tasks = await TaskModel.find({}, { __v: 0 });
+    const tasks = await TaskModel.find(query, { __v: 0 });
 
     res.json(tasks);
   } catch (error) {

@@ -36,6 +36,7 @@ export default function NewTaskForm({ columnId, getTasks, setShowNewTaskForm }) 
       <label>Estimation</label>
       <input type="number" value={estimation} onChange={(e) => setEstimation(e.target.value)} />
       <button type="submit">Submit</button>
+      <button onClick={() => setShowNewTaskForm(false)}>Cancel</button>
     </form>
   );
 }

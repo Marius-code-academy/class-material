@@ -1,7 +1,7 @@
 import joi from "joi";
 import { validateMongoDbId } from "./common.js";
 
-export function taskParamValidation(req, res, next) {
+export function idParamValidation(req, res, next) {
   const schema = joi.object({
     id: joi.string().custom(validateMongoDbId).required(),
   });

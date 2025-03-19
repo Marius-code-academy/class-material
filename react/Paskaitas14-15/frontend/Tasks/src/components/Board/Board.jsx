@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import axios from "axios";
 import Column from "../Column/Column";
 import styles from "./Board.module.css";
+import AddColumnForm from "../AddColumnForm/AddColumnForm";
 
 const API_HOST = import.meta.env.VITE_API_URL;
 
@@ -16,12 +17,15 @@ export default function Board() {
       .catch((err) => console.log(err));
   }
 
-  useEffect(() => {
+  function getColumns() {
     axios
       .get(`${API_HOST}/column`)
       .then((response) => setColumns(response.data))
       .catch((err) => console.log(err));
+  }
 
+  useEffect(() => {
+    getColumns();
     getTasks();
   }, []);
 
@@ -44,8 +48,9 @@ export default function Board() {
   return (
     <div className={styles.columnWrapper}>
       {columns.map((column) => (
-        <Column getTasks={getTasks} columns={columns} tasks={groupedTasks[column._id] ?? []} columnData={column} key={column._id} />
+        <Column getColumns={getColumns} getTasks={getTasks} columns={columns} tasks={groupedTasks[column._id] ?? []} columnData={column} key={column._id} />
       ))}
+      <AddColumnForm getColumns={getColumns} />
     </div>
   );
 }
