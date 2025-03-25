@@ -1,12 +1,16 @@
-import mongoose from "mongoose";
+import mongoose, { Document } from "mongoose";
 
+// Define the TypeScript type for the Item document
 type Item = {
   name: string;
   price: number;
   owner: string;
 };
 
-const ItemSchema = new mongoose.Schema({
+// Extend the Mongoose Document type with the Item type
+export type ItemDocument = Document & Item;
+
+const ItemSchema = new mongoose.Schema<ItemDocument>({
   name: {
     type: String,
     required: true,
@@ -21,4 +25,4 @@ const ItemSchema = new mongoose.Schema({
   },
 });
 
-export default mongoose.model<Item>("Item", ItemSchema);
+export default mongoose.model<ItemDocument>("Item", ItemSchema);

@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import ItemModel from "../models/ItemModel";
+import ItemModel, { ItemDocument } from "../models/ItemModel";
 import mongoose from "mongoose";
 
 type PostItemBody = {
@@ -23,7 +23,7 @@ type PostItemErrorResponse = {
 
 export async function postItem(req: Request<PostItemParams, {}, PostItemBody>, res: Response<PostItemResponse[] | PostItemErrorResponse>) {
   try {
-    const items: PostItemResponse[] = await ItemModel.find();
+    const items = await ItemModel.find<PostItemResponse>();
 
     res.json(items);
   } catch (error: unknown) {
