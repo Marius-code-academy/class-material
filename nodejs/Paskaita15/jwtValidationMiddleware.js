@@ -6,7 +6,8 @@ dotenv.config();
 const { JWT_SECRET } = process.env;
 
 export function validateJwtMiddleware(req, res, next) {
-  const { authorization } = req.headers;
+  const cookie = req.cookies;
+  console.log("cookie", cookie);
 
   if (!authorization) {
     return res.status(401).json({ message: "unauthorized" });
@@ -16,7 +17,7 @@ export function validateJwtMiddleware(req, res, next) {
 
   try {
     const user = jwt.verify(token, JWT_SECRET);
-
+    req.user = user;
     next();
   } catch (error) {
     res.status(401).json({ message: "unauthorized" });

@@ -9,6 +9,8 @@ router.post("/register", registerUser);
 router.post("/login", loginUser);
 
 router.get("/test", validateJwtMiddleware, (req, res) => {
+  console.log(req.user);
+
   res.json({ message: "test" });
 });
 
