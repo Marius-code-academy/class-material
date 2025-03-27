@@ -7,13 +7,11 @@ const { JWT_SECRET } = process.env;
 
 export function validateJwtMiddleware(req, res, next) {
   const cookie = req.cookies;
-  console.log("cookie", cookie);
+  const { token } = cookie;
 
-  if (!authorization) {
+  if (!token) {
     return res.status(401).json({ message: "unauthorized" });
   }
-
-  const token = authorization.split(" ")[1];
 
   try {
     const user = jwt.verify(token, JWT_SECRET);

@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
 
   async function onFormSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -15,7 +18,7 @@ export default function LoginPage() {
       };
 
       const { data } = await axios.post("http://localhost:3000/login", body, { withCredentials: true });
-      console.log(data);
+      navigate("/dashboard");
     } catch (error) {
       console.log(error);
     }

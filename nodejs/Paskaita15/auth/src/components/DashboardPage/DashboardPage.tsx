@@ -1,11 +1,21 @@
-import axios from "axios";
+import axios, { AxiosError } from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function DashboardPage() {
+  const navigate = useNavigate();
+
   async function onButtonClick() {
     try {
-      await axios.get("http://localhost:3000/test", { withCredentials: true });
+      const { data } = await axios.get("http://localhost:3000/test", { withCredentials: true });
+      console.log(data);
     } catch (error) {
-      console.log(error);
+      if (error instanceof AxiosError) {
+        if (error.response?.status === 401) {
+          navigate("/login");
+        }
+      } else {
+        console.log(error);
+      }
     }
   }
 

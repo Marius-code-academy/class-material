@@ -8,6 +8,10 @@ router.post("/register", registerUser);
 
 router.post("/login", loginUser);
 
+router.get("/validateToken", validateJwtMiddleware, (req, res) => {
+  res.json({ message: "valid" });
+});
+
 router.get("/test", validateJwtMiddleware, (req, res) => {
   console.log(req.user);
 
