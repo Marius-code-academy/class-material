@@ -8,9 +8,9 @@ import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 function App() {
   return (
     <Router>
-      <AuthContextProvider>
-        <Routes>
-          <Route path="/login" element={<LoginPage />} />
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+        <AuthContextProvider>
           <Route
             path="/dashboard"
             element={
@@ -19,8 +19,8 @@ function App() {
               </ProtectedRoute>
             }
           />
-        </Routes>
-      </AuthContextProvider>
+        </AuthContextProvider>
+      </Routes>
     </Router>
   );
 }

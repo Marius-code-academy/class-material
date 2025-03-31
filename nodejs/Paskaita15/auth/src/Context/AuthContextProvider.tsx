@@ -19,18 +19,6 @@ const AuthContext = createContext<AuthContext>({
 const AuthContextProvider = ({ children }: AuthContextProviderProps) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    axios
-      .get("http://localhost:3000/validateToken", { withCredentials: true })
-      .then(() => setIsAuthenticated(true))
-      .catch(() => {
-        setIsAuthenticated(false);
-        navigate("/login");
-      });
-  }, [navigate]);
-
   return <AuthContext.Provider value={{ isAuthenticated, setIsAuthenticated }}>{children}</AuthContext.Provider>;
 };
 
